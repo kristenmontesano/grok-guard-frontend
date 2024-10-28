@@ -21,6 +21,15 @@ const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
     }
   };
 
+  const getResponseClass = () => {
+    if (!response) return 'response-container';
+    return response.toLowerCase().includes('unsafe') 
+      ? 'response-container unsafe'
+      : response.toLowerCase().includes('safe')
+        ? 'response-container safe'
+        : 'response-container';
+  };
+
   return (
     <div>
       <button 
@@ -38,7 +47,7 @@ const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
         )}
       </button>
       {response && (
-        <div className="response-container">
+        <div className={getResponseClass()}>
           <p className="response-text">{response}</p>
         </div>
       )}
