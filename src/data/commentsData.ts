@@ -5,7 +5,7 @@ export interface Comment {
   
   export const comments: Comment[] = [
     { id: 1, text: 'i think you stol john doe project original hit' },
-    { id: 2, text: 'copy of hexnaut?' },
+    { id: 2, text: 'copy of hexnaut?\r\n' },
     { id: 3, text: 'thats what i based it off of' },
     { id: 4, text: 'also hack as much as you want' },
     { id: 5, text: '🔥' },

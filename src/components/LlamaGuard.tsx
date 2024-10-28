@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getChatCompletion } from '../ai/groqClient';
 
 interface LlamaGuardProps {
@@ -8,9 +8,24 @@ interface LlamaGuardProps {
 const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [lastRequestTime, setLastRequestTime] = useState<number>(0);
+
+  useEffect(() => {
+    setResponse(null);
+  }, [comment]);
 
   const sendToLlamaGuard = async () => {
+    const now = Date.now();
+    const timeSinceLastRequest = now - lastRequestTime;
+    const needsCooldown = timeSinceLastRequest < 2000;
+    
     setLoading(true);
+    setLastRequestTime(now);
+
+    if (needsCooldown) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
     try {
       const result = await getChatCompletion(comment);
       setResponse(result);
