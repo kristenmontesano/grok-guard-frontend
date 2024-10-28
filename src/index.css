@@ -61,7 +61,7 @@ h2 {
   all: unset;
   background: rgba(51, 65, 85, 0.4);
   color: #e2e8f0;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
   border-radius: 12px;
   border: 1px solid rgba(148, 163, 184, 0.1);
   cursor: pointer;
@@ -73,6 +73,9 @@ h2 {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .comment-button::before {
