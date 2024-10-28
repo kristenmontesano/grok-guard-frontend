@@ -21,11 +21,11 @@ const InfoPanels: React.FC = () => {
     <div className="right-panels">
       <div className="info-panel">
         <h2>About This Project</h2>
-        {/* You'll add your project description text here */}
+        This project demonstrates the use for <span style={{color: '#98FB98'}}>Llama Guard</span> 3 8B powered by <span style={{color: '#98FB98'}}>Groq</span> in moderating the comments on a children's coding education prlatform. On the platform, <a href="https://jippity.pro/" style={{color: '#ec4899'}}>https://JIPPITY.PRO/</a>, children code and publish projects. They can play and comment on one another's published projects as well. In this demo, we ran actual data from our database through <span style={{color: '#98FB98'}}>Groq</span> with <span style={{color: '#98FB98'}}>Llama Guard</span> to assess it's ability to moderate comments. Potential impact is integrating this into the current moderation systems of the product to help us either prevent users from posting comments flagged by <span style={{color: '#98FB98'}}>Llama Guard</span> or to forward links to a human admin to assess them at some regular interval.
       </div>
       
       <div className="categories-panel">
-        <h2>Moderation Categories</h2>
+        <h2>Unsafe Content Categories</h2>
         {categories.map((category) => (
           <div key={category.code} className="category-item">
             <span className="category-code">{category.code}:</span>
