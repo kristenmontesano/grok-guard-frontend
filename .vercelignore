@@ -1,0 +1,4 @@
+backend/GuardDemo/
+**/*.csv
+**/*.db
+**/*.sqlite3
