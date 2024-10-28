@@ -1,10 +1,9 @@
 import Groq from "groq-sdk";
 
-const isDevelopment = import.meta.env.VITE_ENV === 'development';
 
 const groq = new Groq({
   apiKey: import.meta.env.VITE_GROQ_API_KEY,
-  dangerouslyAllowBrowser: isDevelopment,
+  dangerouslyAllowBrowser: true,
 });
 
 export async function getChatCompletion(message: string) {
