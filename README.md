@@ -1,21 +1,38 @@
-# React + TypeScript + Vite
+# Children's Video Game Comment Moderation Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A demo application using Groq and Llama Guard to analyze children's video game comments for safety concerns.
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+## Features
 
-## Deploy Your Own
+- Content analysis using LLaMA Guard 3.8B model
+- Safety checks across 13 categories including:
+  - Violent/Non-Violent Crimes
+  - Sexual Content
+  - Child Exploitation
+  - Hate Speech
+  - Self-Harm
+  - And more
 
-Deploy your own Vite project with Vercel.
+## Technical Stack
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite-react&template=vite-react)
+- React + TypeScript
+- Vite for build tooling
+- Groq API integration
+- Llama Guard 3.8B model
+- Responsive UI with CSS Grid/Flexbox
+- Environment variables for API key management
 
-_Live Example: https://vite-react-example.vercel.app_
+## Development
 
-### Deploying From Your Terminal
+To run locally:
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+1. Clone the repository
+2. Create a `.env` file with your Groq API key set to `VITE_GROQ_API_KEY`
+3. Run `npm install` to install dependencies
+4. Run `npm run dev` to start the development server
 
-```shell
-$ vercel
-```
+## More info
+
+- [Groq](https://groq.com/)
+- [Llama Guard](https://github.com/groq/llama-guard)
+- [Jippity.Pro](https://jippity.pro/)
