@@ -36,3 +36,6 @@ To run locally:
 - [Groq](https://groq.com/)
 - [Llama Guard](https://github.com/groq/llama-guard)
 - [Jippity.Pro](https://jippity.pro/)
+
+## Backend/Python version
+We also created a backend version of this application using Python and the Groq API (as our app's backend is in python). This can be run using the README in the `backend` folder. This version runs the entirety of a csv file full of comments through the Llama Guard model and outputs logging with the results. The csv provided in the `backend` folder is just example data, not real data from any of our apps.
