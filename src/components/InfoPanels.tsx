@@ -28,12 +28,14 @@ const InfoPanels: React.FC = () => {
       
       <div className="categories-panel">
         <h2>Unsafe Content Categories</h2>
-        {categories.map((category) => (
-          <div key={category.code} className="category-item">
-            <span className="category-code">{category.code}:</span>
-            {category.desc}
-          </div>
-        ))}
+        <div className="categories-scroll">
+          {categories.map((category) => (
+            <div key={category.code} className="category-item">
+              <span className="category-code">{category.code}:</span>
+              {category.desc}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
