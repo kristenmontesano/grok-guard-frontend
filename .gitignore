@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+
+# Guard Demo files
+backend/GuardDemo/**
+**/guarded*.csv
+**/topguarded*
