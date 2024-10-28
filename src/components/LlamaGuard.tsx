@@ -5,11 +5,13 @@ interface LlamaGuardProps {
   comment: string;
 }
 
+// Component that analyzes text using LlamaGuard for content safety
 const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [lastRequestTime, setLastRequestTime] = useState<number>(0);
 
+  // Reset response when comment changes
   useEffect(() => {
     setResponse(null);
   }, [comment]);
@@ -17,6 +19,7 @@ const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
   const sendToLlamaGuard = async () => {
     const now = Date.now();
     const timeSinceLastRequest = now - lastRequestTime;
+    // Rate limit requests to prevent API overload
     const needsCooldown = timeSinceLastRequest < 2000;
     
     setLoading(true);
@@ -36,6 +39,7 @@ const LlamaGuard: React.FC<LlamaGuardProps> = ({ comment }) => {
     }
   };
 
+  // Determine CSS class based on safety assessment in response
   const getResponseClass = () => {
     if (!response) return 'response-container';
     return response.toLowerCase().includes('unsafe') 

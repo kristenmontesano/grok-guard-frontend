@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { comments, Comment } from '../data/commentsData'; // Import the comments data
+import { comments, Comment } from '../data/commentsData';
 
 interface CommentListProps {
   onSelect: (comment: string | null) => void;

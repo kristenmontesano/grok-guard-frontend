@@ -3,6 +3,7 @@ export interface Comment {
     text: string;
   }
   
+  // Real anonymized comments from our database
   export const comments: Comment[] = [
     { id: 1, text: 'i think you stol john doe project original hit' },
     { id: 2, text: 'copy of hexnaut?\r\n' },

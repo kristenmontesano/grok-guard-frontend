@@ -1,6 +1,6 @@
-/* Base styles */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: #0f172a;
@@ -24,24 +24,23 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-top: 0.8rem;
-  grid-column: 1 / -1;  /* Make the title span full width */
+  grid-column: 1 / -1;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 }
 
-/* Comments container styling */
 .comments-container {
   background: rgba(30, 41, 59, 0.5);
   backdrop-filter: blur(12px);
@@ -49,7 +48,7 @@ h2 {
   border-radius: 24px;
   padding: 1rem;
   height: auto;
-  width: 95%; /* Increased from 90% to reduce space between panels */
+  width: 95%;
 }
 
 .comments-list {
@@ -67,7 +66,7 @@ h2 {
   border: 1px solid rgba(148, 163, 184, 0.1);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
   width: 100%;
   height: 6.5vh;
@@ -109,7 +108,6 @@ h2 {
   height: 80%;
 }
 
-/* Llama Guard button styling */
 .llama-guard-button {
   background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
   color: white;
@@ -117,7 +115,7 @@ h2 {
   padding: 1rem 1.5rem;
   border-radius: 14px;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -125,7 +123,7 @@ h2 {
   justify-content: center;
   gap: 0.75rem;
   margin-top: 1rem;
-  width: 98%; /* Make button fill container width */
+  width: 98%;
   position: relative;
   overflow: hidden;
 }
@@ -165,7 +163,6 @@ h2 {
   }
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { 
     opacity: 0;
@@ -181,7 +178,6 @@ h2 {
   animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Response container styling */
 .response-container {
   background: rgba(99, 102, 241, 0.1);
   backdrop-filter: blur(12px);
@@ -189,19 +185,17 @@ h2 {
   border-radius: 16px;
   padding: 1.25rem;
   margin-top: 1rem;
-  width: 94%; /* Match comments container width */
+  width: 94%;
   animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
 }
 
-/* Unsafe variant */
 .response-container.unsafe {
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.2);
   box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
 }
 
-/* Safe variant */
 .response-container.safe {
   background: rgba(34, 197, 94, 0.1);
   border: 1px solid rgba(34, 197, 94, 0.2);
@@ -210,7 +204,7 @@ h2 {
 
 .response-text {
   color: #f8fafc;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   line-height: 1.6;
   margin: 0;
   font-weight: 500;
@@ -239,8 +233,9 @@ h2 {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 24px;
-  padding: 2rem; /* Increased padding for better spacing */
-  width: 90%; /* Make panels fill their container */
+  padding: 2rem;
+  width: 90%;
+  font-size:  1.25rem;
 }
 
 .categories-panel {
@@ -248,13 +243,13 @@ h2 {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 24px;
-  padding: 2rem; /* Increased padding for better spacing */
-  width: 90%; /* Make panels fill their container */
+  padding: 2rem;
+  width: 90%;
 }
 
 .category-item {
   margin-bottom: 1rem;
-  padding: 1rem 1rem; /* Increased padding for category items */
+  padding: 1rem 1rem;
   background: rgba(51, 65, 85, 0.4);
   border-radius: 12px;
   border: 1px solid rgba(148, 163, 184, 0.1);
@@ -272,11 +267,10 @@ h2 {
   }
 }
 
-/* Add this to your CSS */
 .pbg-logo {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 200px; /* Adjust size as needed while maintaining aspect ratio */
-  z-index: 1000; /* Ensure it stays above other content */
+  width: 200px;
+  z-index: 1000;
 }
